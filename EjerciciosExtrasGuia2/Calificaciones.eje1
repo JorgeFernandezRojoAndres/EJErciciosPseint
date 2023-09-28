@@ -1,0 +1,16 @@
+Algoritmo Calificaciones
+	Definir nota1, nota2, nota3, promedio Como Real
+	Definir alumno Como Caracter
+	Escribir "ingrese el nombre del alumno"
+	Leer alumno
+	Escribir "Ingrese las tres notas del alumno ",alumno
+	Leer nota1,nota2,nota3
+	
+	promedio = (nota1 + nota2 + nota3) / 3
+	
+	Si promedio >= 70 Entonces
+		Escribir "El alumno ",alumno "ha aprobado el curso con un promedio de ", promedio
+	SiNo
+		Escribir "El alumno " ,alumno "ha reprobado el curso con un promedio de ", promedio
+	FinSi
+FinAlgoritmo

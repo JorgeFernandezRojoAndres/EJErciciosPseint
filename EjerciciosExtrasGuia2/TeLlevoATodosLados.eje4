@@ -1,0 +1,29 @@
+Algoritmo TeLlevoATodosLados
+	
+    // Declaración de variables
+    Definir horas, minutos Como Entero
+    Definir litrosNafta, totalPagar Como Real
+	
+    // Pedimos al usuario que ingrese la información necesaria
+    Escribir"Ingrese la cantidad de horas de uso del auto: "
+    Leer horas
+    Escribir"Ingrese la cantidad de minutos de uso del auto: "
+    Leer minutos
+	
+    // Calculamos el total a pagar si el auto se devuelve dentro de las 2 horas de uso
+    Si horas < 2 O horas == 2 Y minutos == 0 Entonces
+        totalPagar = 400
+        Escribir "El total a pagar es de $", totalPagar
+		// Si el auto se devuelve después de las 2 horas, se cobra el alquiler por hora y por minuto
+    Sino
+        Escribir"Ingrese la cantidad de litros de nafta gastados: "
+        Leer litrosNafta
+        totalPagar = 400 + (litrosNafta * 40) + ((horas - 2) * 60 + minutos) * 5.20 / 60
+		//El primer término es un valor fijo de $400 que se cobra por el alquiler si el cliente devuelve el auto dentro de las 2 horas de uso.
+		//El segundo término corresponde al costo de la nafta gastada. Se multiplica la cantidad de litros de nafta gastados por el valor unitario de $40.
+		//El tercer término corresponde al costo del alquiler por hora y por minuto de uso después de las 2 horas. Para calcular este costo, primero se convierte la cantidad de horas en minutos y se le suman los minutos de uso del auto. Luego, se multiplica esta cantidad de minutos por el valor unitario de $5,20 y se divide por 60 para obtener el costo por hora.
+        Escribir "El total a pagar es de $", totalPagar
+		
+    FinSi
+	
+FinAlgoritmo
